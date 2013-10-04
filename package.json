@@ -1,0 +1,24 @@
+{
+  "name": "cinnamon",
+  "version": "0.1.0",
+  "description": "A continuous integration server on top of substacks cicada.",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm install && grunt"
+  },
+  "keywords": [
+    "ci"
+  ],
+  "author": "André König (andre.koenig@posteo.de)",
+  "license": "MIT",
+  "dependencies": {
+    "cicada": "~1.1.0",
+    "levelup": "~0.17.0",
+    "leveldown": "~0.9.1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-jasmine-node": "~0.1.0"
+  }
+}

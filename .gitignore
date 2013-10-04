@@ -1,0 +1,4 @@
+config/environment.json
+data/*
+db
+node_modules
