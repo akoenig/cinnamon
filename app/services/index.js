@@ -10,13 +10,15 @@
 
 'use strict';
 
-var BuildService = require('./build');
+var BuildService = require('./build'),
+    LogfileService = require('./logfile');
 
 exports.init = function (daos) {
 
     var services = {};
 
-    services.build = BuildService.create(daos.get('build'));
+    services.build   = BuildService.create(daos.get('build'));
+    services.logfile = LogfileService.create(daos.get('logfile'));
 
     return {
         get : function get (type) {

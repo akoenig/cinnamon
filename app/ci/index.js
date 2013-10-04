@@ -26,11 +26,13 @@ exports.init = function (config, services) {
         build.repository = commit.repo;
         build.commit     = commit.hash;
         build.branch     = commit.branch;
+        build.running    = true;
 
         service.add(build).then(
             function success (build) {
                 commit.run('test').on('exit', function (code) {
                     build.success = !code;
+                    build.running = false;
 
                     service.update(build.id, build).then(
                         function success () {

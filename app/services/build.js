@@ -62,6 +62,24 @@ BuildService.prototype.update = function update (id, build) {
  * DOCME
  *
  */
+BuildService.prototype.findAll = function findAll () {
+    var deferred = promise.defer();
+
+    this.dao.findAll(function (err, builds) {
+        if (err) {
+            return deferred.reject(err);
+        }
+
+        deferred.resolve(builds);
+    });
+
+    return deferred.promise;  
+};
+
+/**
+ * DOCME
+ *
+ */
 exports.create = function (buildDAO) {
     return new BuildService(buildDAO);
 };

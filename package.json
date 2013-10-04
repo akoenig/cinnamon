@@ -14,7 +14,9 @@
   "dependencies": {
     "cicada": "~1.1.0",
     "levelup": "~0.17.0",
-    "leveldown": "~0.9.1"
+    "leveldown": "~0.9.1",
+    "express": "~3.4.0",
+    "stripcolorcodes": "~0.1.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
