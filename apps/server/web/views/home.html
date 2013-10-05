@@ -1,6 +1,6 @@
 <div class="home view">
 
-    <div data-ng-if="builds.length" data-ng-click="clear()" class="ui floated right mini button red"> Clear all builds</div>
+    <div data-ng-if="isClearable()" data-ng-click="clear()" class="ui floated right mini button red"> Clear all builds</div>
 
     <h1 class="ui header">cinnamon <small>Your builds</small></h1>
 

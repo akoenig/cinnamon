@@ -4,6 +4,33 @@
     | (__| | | | | | | | (_| | | | | | | (_) | | | |
      \___|_|_| |_|_| |_|\__,_|_| |_| |_|\___/|_| |_|
 
+A continuous integration server on top of [cicada](https://github.com/substack/cicada).
+
+[image]
+
+## Quickstart
+
+    $ [sudo] npm install -g cinnamon
+    $ cinnamon server
+
+    $ cd /into/your/project
+    $ $EDITOR package.json
+
+    // Define your test script and pipe the output into the cinnamon loggile.
+    ...
+    "scripts": {
+      "test": "npm install && grunt test > cinnamon.log"
+    },
+    ...
+
+That's it! I promise. Now you can use the _cinnamon push_ application in order to trigger the CI process.
+
+**Important:** The _push_ application will also push your changes into your defined remote git repository. With other words: You can use
+
+    $ cinnamon push <remote> <branch>
+
+as a substitution of your well-known git workflow. _cinnamon_ will do both for you: Pushing into your remote git repository and pushing the changes into the _cinnamon_ CI server.
+
 ## Changelog
 
 ### Version 0.2.0 - beta 1 (Future)
