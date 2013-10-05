@@ -23,7 +23,7 @@ A continuous integration server for Node.js applications.
     },
     ...
 
-### Step 3 - Triggering the CI process
+### Step 3 - Trigger the CI process
 
 That's it! I promise. Now you can use the _cinnamon push_ application in order to trigger the CI process.
 
