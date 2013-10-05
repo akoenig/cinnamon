@@ -6,7 +6,11 @@
 
 ## Changelog
 
-### Version 0.2.0 (Future)
+### Version 0.2.0 - beta 1 (Future)
+
+- [ ] Source documentation.
+
+### Version 0.2.0 - beta 0 (20131005)
 
 - Moved configuration file to ~/.cinnamonrc
 - Moved data directory to ~/.cinnamon

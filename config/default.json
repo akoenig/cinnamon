@@ -1,0 +1,11 @@
+{
+    "server": {
+        "ports": {
+            "web": 7777,
+            "integrator": 7778
+        }
+    },
+    "push": {
+        "endpoint": "http://127.0.0.1:7778"
+    }
+}

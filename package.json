@@ -1,6 +1,6 @@
 {
   "name": "cinnamon",
-  "version": "0.2.0",
+  "version": "0.2.0-beta0",
   "description": "A continuous integration server on top of substacks cicada.",
   "author": [
     {
@@ -28,7 +28,8 @@
     "leveldown": "~0.9.1",
     "express": "~3.4.0",
     "stripcolorcodes": "~0.1.0",
-    "optimist": "~0.6.0"
+    "optimist": "~0.6.0",
+    "rimraf": "~2.2.2"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

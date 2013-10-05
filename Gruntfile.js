@@ -16,7 +16,7 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         
         jshint: {
-            files: ['Gruntfile.js', 'app.js', 'app/**/*.js', 'spec/*.js'],
+            files: ['Gruntfile.js', 'app.js', 'config/*.js', 'apps/push/*.js', 'apps/server/{!(web), **}/*.js', 'spec/*.js'],
             options: {
                 node: true,
                 strict: true,

@@ -1,0 +1,35 @@
+<div class="home view">
+
+    <div data-ng-if="builds.length" data-ng-click="clear()" class="ui floated right mini button red"> Clear all builds</div>
+
+    <h1 class="ui header">cinnamon <small>Your builds</small></h1>
+
+    <div data-ng-if="!builds.length && !loading" class="empty">Nothing built so far. Go build something. :)</div>
+
+    <section class="ui raised segment" ng-class="{green: build.success, red: !build.success && !build.running}" data-ng-repeat="build in builds">
+        <header>
+            <h3 class="ui header">
+                <i class="circular red thumbs down icon" data-ng-if="!build.success && !build.running"></i>
+
+                <i class="circular green thumbs up icon" data-ng-if="build.success && !build.running"></i>
+
+                <i title="Building ..." class="circular loading icon" data-ng-if="build.running"></i> 
+                {{build.repository}}
+            </h3>
+        </header>
+
+        <div data-ng-if="build.showLogfile" class="annotation">
+            <div class="ui instructive segment">
+                <pre>
+{{build.logfile}}
+                </pre>
+            </div>
+        </div>
+
+        <div class="ui bottom attached label"><strong>Commit</strong> {{build.commit}} - <strong>Branch</strong> {{build.branch}} - <strong>Date</strong> {{build.created | date: 'dd.MM.yyyy HH:mm:ss'}}
+
+        <div data-ng-hide="build.running" data-ng-click="toggleLogfile(build)" class="ui mini green floated right button">
+            Show Results
+        </div>
+    </div></section>
+</div>
