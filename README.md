@@ -1,6 +1,6 @@
 # cinnamon
 
-![The cinnamon UI]()
+![The cinnamon UI](https://raw.github.com/akoenig/cinnamon/master/cinnamon-ui.png)
 
 A continuous integration server for Node.js applications.
 
