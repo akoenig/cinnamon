@@ -1,9 +1,8 @@
 # cinnamon
 
-[image]
+![The cinnamon UI]()
 
 A continuous integration server for Node.js applications.
-
 
 ## Quickstart
 

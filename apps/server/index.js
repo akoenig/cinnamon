@@ -35,7 +35,7 @@ ServerApplication.prototype.execute = function execute () {
     //
     // Set the path to the database.
     //
-    this.config.database = path.join(__dirname, 'db');
+    this.config.database = path.join(process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE, '.' + this.config.pkg.name, 'db');
 
     //
     // Set the path to the data directory (~/.cinnamon).
