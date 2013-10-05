@@ -1,15 +1,27 @@
 {
   "name": "cinnamon",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A continuous integration server on top of substacks cicada.",
-  "main": "app.js",
+  "author": [
+      {
+        "name": "André König",
+        "email": "akoenig@posteo.de",
+        "web": "http://iam.andrekoenig.info"
+      }
+  ],
+  "main": "./app.js",
+  "bin": "./bin/cinnamon",
+  "preferGlobal": "true",
+  "repository": {
+      "type": "git",
+      "url": "git://github.com/akoenig/cinnamon.git"
+  },
   "scripts": {
     "test": "npm install && grunt"
   },
   "keywords": [
     "ci"
   ],
-  "author": "André König (andre.koenig@posteo.de)",
   "license": "MIT",
   "dependencies": {
     "cicada": "~1.1.0",

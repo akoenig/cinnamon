@@ -46,14 +46,16 @@ config.data.work = path.join(config.data.root, 'work');
 //
 // Init the path to the database.
 //
-config.database = path.join('.', 'db');
+config.database = path.join(__dirname, 'db');
 
 //
 // Configure the path to the web frontend.
 //
 config.frontend = {};
-config.frontend.root = path.join('.', 'public');
+config.frontend.root = path.join(__dirname, 'public');
 config.frontend.index = path.join(config.frontend.root, 'index.html');
+
+// TODO: Decide wether to start as client or server
 
 //
 // Boot ...

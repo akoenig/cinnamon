@@ -43,7 +43,7 @@ module.exports = function (config) {
     app.listen(config.environment.port, config.environment.host);
 
     app.get('/', function (req, res) {
-        res.sendFile(config.frontend.index);
+        res.sendfile(config.frontend.index);
     });
 
     //

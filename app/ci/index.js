@@ -19,7 +19,6 @@ exports.init = function (config, services) {
         service = services.get('build');
 
     ci.on('commit', function (commit) {
-        console.log(commit);
         var build = {};
 
         build.directory  = commit.id;
@@ -36,18 +35,18 @@ exports.init = function (config, services) {
 
                     service.update(build.id, build).then(
                         function success () {
-                            console.log('Updated build: ' + JSON.stringify(build));
+                            console.log(Date.now() + ': Updated build: ' + JSON.stringify(build));
                         },
                         function failure () {
                             // TODO: Implement logging.
-                            console.log('Failed to save build ' + build.commit + '@' + build.repo);                            
+                            console.log(Date.now() + ': Failed to save build ' + build.commit + '@' + build.repo);                            
                         }
                     );
                 });
             },
             function failure () {
                 // TODO: Implement logging.
-                console.log('Failed to save build ' + build.commit + '@' + build.repo);
+                console.log(Date.now() + ': Failed to save build ' + build.commit + '@' + build.repo);
             }
         );
     });

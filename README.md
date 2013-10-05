@@ -6,6 +6,16 @@
 
 ## Changelog
 
+### Version 0.2.0 (Future)
+
+- [ ] Moved configuration file to ~/.cinnamonrc
+- [ ] Moved data directory to ~/.cinnamon
+- [ ] Implemented client and server CLI
+
+### Version 0.1.1 (20131005)
+
+- Fixed startup via shell script.
+
 ### Version 0.1.0 (20131005)
 
 - Implemented REST-API for the AngularJS frontend.
