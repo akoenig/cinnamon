@@ -1,12 +1,9 @@
-          _                                         
-      ___(_)_ __  _ __   __ _ _ __ ___   ___  _ __  
-     / __| | '_ \| '_ \ / _` | '_ ` _ \ / _ \| '_ \ 
-    | (__| | | | | | | | (_| | | | | | | (_) | | | |
-     \___|_|_| |_|_| |_|\__,_|_| |_| |_|\___/|_| |_|
+# cinnamon
+
+[image]
 
 A continuous integration server for Node.js applications.
 
-[image]
 
 ## Quickstart
 
@@ -20,7 +17,7 @@ A continuous integration server for Node.js applications.
     $ cd /into/your/project
     $ $EDITOR package.json
 
-    // Define your test script and pipe the output into the cinnamon loggile.
+    // Define your test script and pipe the output into the cinnamon logfile.
     ...
     "scripts": {
       "test": "npm install && grunt test > cinnamon.log"
@@ -43,7 +40,7 @@ _cinnamon_ will save every build into the following directory:
 
     /home/<user>/.cinnamon
 
-If you won't use _cinnamon_ on your local machine you can also install the module on a remote machine and trigger the CI process from your local computer. To do so, you have to configure the "endpoint" attribute in your local configuration file.
+If you won't use _cinnamon_ on your local machine you can also install the module on a remote machine, start the server and trigger the CI process from your local computer. To do so, you have to configure the "endpoint" attribute in your local configuration file.
 
     $ $EDITOR ~/.cinnamonrc
 
