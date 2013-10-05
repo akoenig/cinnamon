@@ -4,18 +4,18 @@
     | (__| | | | | | | | (_| | | | | | | (_) | | | |
      \___|_|_| |_|_| |_|\__,_|_| |_| |_|\___/|_| |_|
 
-A continuous integration server for Node.js applications, that sits on top of [cicada](https://github.com/substack/cicada).
+A continuous integration server for Node.js applications.
 
 [image]
 
 ## Quickstart
 
-### 1 Installation
+### Step 1 - Installation
 
     $ [sudo] npm install -g cinnamon
     $ cinnamon server
 
-### 2 Configure your project
+### Step 2 - Configure your project
 
     $ cd /into/your/project
     $ $EDITOR package.json
@@ -27,7 +27,7 @@ A continuous integration server for Node.js applications, that sits on top of [c
     },
     ...
 
-### 3 Triggering the CI process
+### Step 3 - Triggering the CI process
 
 That's it! I promise. Now you can use the _cinnamon push_ application in order to trigger the CI process.
 
@@ -43,7 +43,9 @@ _cinnamon_ will save every build into the following directory:
 
     /home/<user>/.cinnamon
 
+If you won't use _cinnamon_ on your local machine you can also install the module on a remote machine and trigger the CI process from your local computer. To do so, you have to configure the "endpoint" attribute in your local configuration file.
 
+    $ $EDITOR ~/.cinnamonrc
 
 ## Changelog
 
@@ -71,3 +73,7 @@ _cinnamon_ will save every build into the following directory:
 ## Author
 
 2013, [André König](http://iam.andrekoenig.info) - akoenig@posteo.de
+
+## Thank you @substack ...
+
+... for your incredible [cicada](https://github.com/substack/cicada) module.
