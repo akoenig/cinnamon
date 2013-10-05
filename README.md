@@ -33,6 +33,12 @@ That's it! I promise. Now you can use the _cinnamon push_ application in order t
 
 as a substitution of your well-known git workflow. _cinnamon_ will do both for you: Pushing into your remote git repository and pushing the changes into the _cinnamon_ CI server.
 
+### Step 4 - The Frontend
+
+Open your Browser and visit:
+
+    http://localhost:7777
+
 ## Configuration
 
 _cinnamon_ will save every build into the following directory:
