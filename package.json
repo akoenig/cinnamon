@@ -1,6 +1,6 @@
 {
   "name": "cinnamon",
-  "version": "0.2.0-beta0",
+  "version": "0.2.0-beta1",
   "description": "A continuous integration server on top of substacks cicada.",
   "author": [
     {

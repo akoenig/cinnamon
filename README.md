@@ -51,9 +51,17 @@ If you won't use _cinnamon_ on your local machine you can also install the modul
 
 ## Changelog
 
-### Version 0.2.0 - beta 1 (Future)
+### Version 0.3.0 (Future)
+
+- [ ] WebSocket-Support
+
+### Version 0.2.0 - beta 2 (Future)
 
 - [ ] Source documentation.
+
+### Version 0.2.0 - beta 1 (20131005)
+
+- Frontend: Implemented long polling for the build overview.
 
 ### Version 0.2.0 - beta 0 (20131005)
 
