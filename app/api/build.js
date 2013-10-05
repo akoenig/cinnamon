@@ -28,7 +28,7 @@ BuildsAPI.prototype.list = function list (req, res) {
             res.json(200, builds);
         },
         function failure (err) {
-            res.json(500, err)
+            res.json(500, err);
         }
     );
 };

@@ -35,7 +35,7 @@ LogfileDAO.prototype.findByDirectory = function findByDirectory (directory, call
             return callback(err);
         }
 
-        content = stripcolorcodes(content.toString())
+        content = stripcolorcodes(content.toString());
 
         return callback(null, content);
     });

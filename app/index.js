@@ -8,7 +8,7 @@
  *
  */
 
-var app      = require('express'),
+var express  = require('express'),
     api      = require('./api/'),
     ci       = require('./ci/'),
     daos     = require('./daos/'),
@@ -17,6 +17,8 @@ var app      = require('express'),
 module.exports = function (config) {
 
     'use strict';
+
+    var app;
 
     //
     // Init the DAOs
@@ -36,13 +38,18 @@ module.exports = function (config) {
     //
     // Init the web module.
     //
-    app = app();
+    app = express();
+    app.use(express.static(config.frontend.root));
     app.listen(config.environment.port, config.environment.host);
+
+    app.get('/', function (req, res) {
+        res.sendFile(config.frontend.index);
+    });
 
     //
     // Init the API.
     //
     api.init(app, services);
 
-    console.log('%s is running (web: %d/ ci: %d)', config.pkg.name, config.environment.port, config.environment.ci);
+    console.log('%s is running (web: %d / ci: %d)', config.pkg.name, config.environment.port, config.environment.ci);
 };

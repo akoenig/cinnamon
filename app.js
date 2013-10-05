@@ -49,6 +49,13 @@ config.data.work = path.join(config.data.root, 'work');
 config.database = path.join('.', 'db');
 
 //
+// Configure the path to the web frontend.
+//
+config.frontend = {};
+config.frontend.root = path.join('.', 'public');
+config.frontend.index = path.join(config.frontend.root, 'index.html');
+
+//
 // Boot ...
 //
 require('./app/')(config);
