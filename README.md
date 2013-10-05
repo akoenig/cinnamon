@@ -4,14 +4,18 @@
     | (__| | | | | | | | (_| | | | | | | (_) | | | |
      \___|_|_| |_|_| |_|\__,_|_| |_| |_|\___/|_| |_|
 
-A continuous integration server on top of [cicada](https://github.com/substack/cicada).
+A continuous integration server for Node.js applications, that sits on top of [cicada](https://github.com/substack/cicada).
 
 [image]
 
 ## Quickstart
 
+### 1 Installation
+
     $ [sudo] npm install -g cinnamon
     $ cinnamon server
+
+### 2 Configure your project
 
     $ cd /into/your/project
     $ $EDITOR package.json
@@ -23,6 +27,8 @@ A continuous integration server on top of [cicada](https://github.com/substack/c
     },
     ...
 
+### 3 Triggering the CI process
+
 That's it! I promise. Now you can use the _cinnamon push_ application in order to trigger the CI process.
 
 **Important:** The _push_ application will also push your changes into your defined remote git repository. With other words: You can use
@@ -30,6 +36,14 @@ That's it! I promise. Now you can use the _cinnamon push_ application in order t
     $ cinnamon push <remote> <branch>
 
 as a substitution of your well-known git workflow. _cinnamon_ will do both for you: Pushing into your remote git repository and pushing the changes into the _cinnamon_ CI server.
+
+## Configuration
+
+_cinnamon_ will save every build into the following directory:
+
+    /home/<user>/.cinnamon
+
+
 
 ## Changelog
 
