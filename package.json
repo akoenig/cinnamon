@@ -1,20 +1,19 @@
 {
   "name": "cinnamon",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A continuous integration server on top of substacks cicada.",
   "author": [
-      {
-        "name": "André König",
-        "email": "akoenig@posteo.de",
-        "web": "http://iam.andrekoenig.info"
-      }
+    {
+      "name": "André König",
+      "email": "akoenig@posteo.de",
+      "web": "http://iam.andrekoenig.info"
+    }
   ],
-  "main": "./app.js",
   "bin": "./bin/cinnamon",
   "preferGlobal": "true",
   "repository": {
-      "type": "git",
-      "url": "git://github.com/akoenig/cinnamon.git"
+    "type": "git",
+    "url": "git://github.com/akoenig/cinnamon.git"
   },
   "scripts": {
     "test": "npm install && grunt"
@@ -28,7 +27,8 @@
     "levelup": "~0.17.0",
     "leveldown": "~0.9.1",
     "express": "~3.4.0",
-    "stripcolorcodes": "~0.1.0"
+    "stripcolorcodes": "~0.1.0",
+    "optimist": "~0.6.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

@@ -8,9 +8,10 @@
 
 ### Version 0.2.0 (Future)
 
-- [ ] Moved configuration file to ~/.cinnamonrc
-- [ ] Moved data directory to ~/.cinnamon
-- [ ] Implemented client and server CLI
+- Moved configuration file to ~/.cinnamonrc
+- Moved data directory to ~/.cinnamon
+- Implemented client and server CLI.
+- Implemented 'push application' that wraps the git commands for pushing to main repo and the cinnamon CI server.
 
 ### Version 0.1.1 (20131005)
 

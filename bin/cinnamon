@@ -1,3 +1,35 @@
 #!/usr/bin/env node
 
-require('../');
+/*
+ * cinnamon
+ *
+ * A continuous integration server on top of substacks cicada.
+ *
+ * Copyright(c) 2013 André König <akoenig@posteo.de>
+ * MIT Licensed
+ *
+ */
+
+'use strict';
+
+var cinnamon = require('../app'),
+    optimist = require('optimist'),
+    args     = optimist.argv._;
+
+optimist.usage('Usage: cinnamon [server || push <remote> <branch>]');
+
+cinnamon.init(function (apps) {
+    var app = apps.get(args[0]);
+    
+    // Slice the necessary arguments out of the args array.
+    // 0 => command; 1 -> args.length => args for the app.
+    args = args.slice(1, args.length);
+
+    if (!app) {
+        optimist.showHelp();
+
+        process.exit(1);
+    }
+
+    app.execute(args);
+});

@@ -1,4 +1,2 @@
-config/environment.json
-data/*
-db
+apps/server/db
 node_modules

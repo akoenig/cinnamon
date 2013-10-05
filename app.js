@@ -10,54 +10,32 @@
 
 'use strict';
 
-var path   = require('path'),
-    pkg    = require('./package.json'),
-    config = {};
+var apps   = require('./apps/'),
+    config = require('./config/'),
+    path   = require('path'),
+    pkg    = require('./package.json');
 
-//
-// Load the package.json as meta information.
-//
-config.pkg = require('./package.json');
+exports.init = function (callback) {
+    config.read(pkg.name, function done (err, config) {
+        if (err) {
+            return console.log('Error while reading configuration. ' + err);
+        }
 
-//
-// Set the process title to the apps name.
-//
-process.title = config.pkg.name;
+        //
+        // Load the package.json as meta information.
+        //
+        config.pkg = pkg;
 
-//
-// Load the configuration
-//
-try {
-    config.environment = require('./config/environment.json');
-} catch (e) {
-    console.log('Failed to load configuration: ' + e);
+        //
+        // Set the process title to the apps name.
+        //
+        process.title = config.pkg.name;
 
-    process.exit(1);
-}
+        //
+        // Init the apps.
+        //
+        apps = apps.init(config);
 
-//
-// Init the path to the cicada data path.
-//
-config.data = {};
-config.data.root = path.join('.', 'data');
-config.data.repo = path.join(config.data.root, 'repo');
-config.data.work = path.join(config.data.root, 'work');
-
-//
-// Init the path to the database.
-//
-config.database = path.join(__dirname, 'db');
-
-//
-// Configure the path to the web frontend.
-//
-config.frontend = {};
-config.frontend.root = path.join(__dirname, 'public');
-config.frontend.index = path.join(config.frontend.root, 'index.html');
-
-// TODO: Decide wether to start as client or server
-
-//
-// Boot ...
-//
-require('./app/')(config);
+        callback(apps);
+    });
+}; 
