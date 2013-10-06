@@ -4,6 +4,7 @@
 
 A continuous integration server for Node.js applications.
 
+
 ## Quickstart
 
 ### Step 1 - Installation
