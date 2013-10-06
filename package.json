@@ -16,7 +16,7 @@
     "url": "git://github.com/akoenig/cinnamon.git"
   },
   "scripts": {
-    "test": "npm install && grunt"
+    "test": "npm install && grunt > cinnamon.log"
   },
   "keywords": [
     "ci"
