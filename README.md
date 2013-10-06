@@ -57,8 +57,9 @@ If you won't use _cinnamon_ on your local machine you can also install the modul
 
 ### Version 0.2.0 - beta 2 (Future)
 
-- [ ] Source documentation.
-- [ ] Loading indicator for the "Clear all builds" functionality.
+- [ ] Backend / Frontend: Source documentation.
+- [ ] Frontend: Loading indicator for the "Clear all builds" functionality.
+- [ ] Frontend: Refresh overview when there were no builds before and a build has been started recently.
 
 ### Version 0.2.0 - beta 1 (20131005)
 
