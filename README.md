@@ -58,6 +58,7 @@ If you won't use _cinnamon_ on your local machine you can also install the modul
 ### Version 0.2.0 - beta 2 (Future)
 
 - [ ] Source documentation.
+- [ ] Loading indicator for the "Clear all builds" functionality.
 
 ### Version 0.2.0 - beta 1 (20131005)
 
