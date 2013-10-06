@@ -4,7 +4,6 @@
 
 A continuous integration server for Node.js applications.
 
-
 ## Quickstart
 
 ### Step 1 - Installation
@@ -46,7 +45,7 @@ _cinnamon_ will save every build into the following directory:
 
     /home/<user>/.cinnamon
 
-If you won't use _cinnamon_ on your local machine you can also install the module on a remote machine, start the server and trigger the CI process from your local computer. To do so, you have to configure the "endpoint" attribute in your local configuration file.
+If you won't use _cinnamon_ on your local machine you can also install the module on a remote machine, start the server and trigger the CI process from your local computer. To do so, you have to configure the "endpoint" attribute in your local configuration file and change it to your respective installation.
 
     $ $EDITOR ~/.cinnamonrc
 
