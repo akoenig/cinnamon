@@ -51,6 +51,7 @@ If you won't use _cinnamon_ on your local machine you can also install the modul
 
 ## Changelog
 
+
 ### Version 0.3.0 (Future)
 
 - [ ] WebSocket-Support
