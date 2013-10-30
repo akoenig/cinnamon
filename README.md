@@ -55,6 +55,7 @@ If you won't use _cinnamon_ on your local machine you can also install the modul
 ### Version 0.3.0 (Future)
 
 - [ ] WebSocket-Support
+- [ ] Backend / Frontend: Count SLOC and other metrics like statements, object literals etc.
 
 ### Version 0.2.0 - beta 2 (Future)
 
